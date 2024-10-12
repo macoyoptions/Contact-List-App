@@ -223,4 +223,3 @@ def test_negative_login_page_contact_list(signup):
     loginpage.email(ConfigNegativeLogin.EMAIL)
     loginpage.password(ConfigNegativeLogin.PASSWORD)
     loginpage.submit()
-

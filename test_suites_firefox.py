@@ -10,9 +10,6 @@ from ConfigFirefox.Config_Firefox import ConfigFirefox, ConfigaddnewcontactFiref
 from LoginPage.Login_test import LoginPage
 from LogoutPage.Logout_test import LogoutPage
 from SignupPage.Signup_test import SignupPage
-from config.config import Configaddnewcontact, Config, Configaddnewcontact1, Configaddnewcontact2, Configaddnewcontact3, \
-    Configaddnewcontact4, Configaddnewcontact5, Configaddnewcontact6, Configaddnewcontact7, Configaddnewcontact8, \
-    Configaddnewcontact9, ConfigLogin, ConfigNegativeLogin
 
 
 @pytest.fixture(scope="session")

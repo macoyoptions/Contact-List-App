@@ -2,7 +2,7 @@ class ConfigFirefox:
     BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
     FIRSTNAME = "Adekunle"
     LASTNAME = "Jumoke"
-    EMAIL = "adebisi@gmail.com"
+    EMAIL = "yemi@gmail.com"
     PASSWORD = "Adeola12"
 
 
@@ -148,7 +148,7 @@ class ConfigaddnewcontactFirefox9:
 
 class ConfigLoginFirefox:
     # BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
-    EMAIL = "adebisi@gmail.com"
+    EMAIL = "yemi@gmail.com"
     PASSWORD = "Adeola12"
 
 

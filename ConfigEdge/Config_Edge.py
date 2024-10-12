@@ -2,7 +2,7 @@ class ConfigEdge:
     BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
     FIRSTNAME = "Adekunle"
     LASTNAME = "Jumoke"
-    EMAIL = "Tafabalewa@gmail.com"
+    EMAIL = "aribidara@gmail.com"
     PASSWORD = "Adeola12"
 
 
@@ -148,7 +148,7 @@ class Configaddnewcontactedge9:
 
 class ConfigLoginedge:
     # BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
-    EMAIL = "tafabalewa@gmail.com"
+    EMAIL = "aribidara@gmail.com"
     PASSWORD = "Adeola12"
 
 

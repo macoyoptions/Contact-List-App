@@ -2,7 +2,7 @@ class Config:
     BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
     FIRSTNAME = "Adekunle"
     LASTNAME = "Jumoke"
-    EMAIL = "ademitide@gmail.com"
+    EMAIL = "ademiti@gmail.com"
     PASSWORD = "Adeola12"
 
 
@@ -148,7 +148,7 @@ class Configaddnewcontact9:
 
 class ConfigLogin:
     # BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
-    EMAIL = "ademitide@gmail.com"
+    EMAIL = "ademiti@gmail.com"
     PASSWORD = "Adeola12"
 
 

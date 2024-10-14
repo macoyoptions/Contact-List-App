@@ -1,8 +1,6 @@
 class Config:
     BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
-    FIRSTNAME = "Adekunle"
-    LASTNAME = "Jumoke"
-    EMAIL = "salako@gmail.com"
+    GMAIL = "olaide@gmail.com"
     PASSWORD = "Adeola12"
 
 
@@ -146,13 +144,7 @@ class Configaddnewcontact9:
     COUNTRY9 = "Nigeria"
 
 
-class ConfigLogin:
-    # BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
-    EMAIL = "salako@gmail.com"
-    PASSWORD = "Adeola12"
-
-
 class ConfigNegativeLogin:
     # BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
-    EMAIL = "adex@gmail"
-    PASSWORD = "Adeola12"
+    NEGATIVE_EMAIL = "adex@gmail"
+    NEGATIVE_PASSWORD = "Adeola12"

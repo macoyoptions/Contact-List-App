@@ -1,7 +1,11 @@
 from selenium.webdriver.common.by import By
 
 
-class AddNewContactLocator:
+class AllLocators:
+    ENTER_GMAIL = (By.XPATH, "/html/body/div[3]/form/p[1]/input")
+    ENTER_PASSWORD = (By.XPATH, "/html/body/div[3]/form/p[2]/input")
+    CLICK_LOGIN = (By.ID, "submit")
+
     CLICK_ADD_NEW_CONTACT = (By.XPATH, "/html/body/div/p[2]/button")
     ENTER_FIRST_NAME = (By.ID, "firstName")
     ENTER_LAST_NAME = (By.XPATH, "/html/body/div/form/p[1]/input[2]")
@@ -141,3 +145,10 @@ class AddNewContactLocator:
     ENTER_POSTAL_9 = (By.ID, "postalCode")
     ENTER_COUNTRY_9 = (By.ID, "country")
     CLICK_SUBMIT_9 = (By.ID, "submit")
+
+    CLICK_LOGOUT = (By.XPATH, "/html/body/div/header/button")
+
+    # FOR NEGATIVE LOGIN
+    NEGATIVE_ENTER_GMAIL = (By.XPATH, "/html/body/div[3]/form/p[1]/input")
+    NEGATIVE_ENTER_PASSWORD = (By.XPATH, "/html/body/div[3]/form/p[2]/input")
+    NEGATIVE_CLICK_LOGIN = (By.ID, "submit")

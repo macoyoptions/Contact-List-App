@@ -12,7 +12,7 @@ from config.config import Config, Configaddnewcontact, Configaddnewcontact1, Con
 def driver_setup():
     firefox_options = Options()
     # Uncomment the line below to run in headless mode
-    firefox_options.add_argument("--headless")  # Run Chrome in headless mode
+    firefox_options.add_argument("--headless")  # Run Firefox in headless mode
     firefox_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
     driver = webdriver.Firefox(options=firefox_options)
     driver.implicitly_wait(20)
@@ -206,7 +206,7 @@ def test_logout(login):
 def driver_setup1():
     firefox_options = Options()
     # Uncomment the line below to run in headless mode
-    firefox_options.add_argument("--headless")  # Run Chrome in headless mode
+    firefox_options.add_argument("--headless")  # Run Firefox in headless mode
     firefox_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
     driver = webdriver.Firefox(options=firefox_options)
     driver.implicitly_wait(20)

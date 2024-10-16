@@ -12,7 +12,7 @@ from config.config import Config, Configaddnewcontact, Configaddnewcontact1, Con
 def driver_setup():
     edge_options = Options()
     # Uncomment the line below to run in headless mode
-    edge_options.add_argument("--headless")  # Run Chrome in headless mode
+    edge_options.add_argument("--headless")  # Run Edge in headless mode
     edge_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
     driver = webdriver.Edge(options=edge_options)
     driver.implicitly_wait(20)
@@ -205,7 +205,7 @@ def test_logout(login):
 def driver_setup1():
     edge_options = Options()
     # Uncomment the line below to run in headless mode
-    edge_options.add_argument("--headless")  # Run Chrome in headless mode
+    edge_options.add_argument("--headless")  # Run Edge in headless mode
     edge_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
     driver = webdriver.Edge(options=edge_options)
     driver.implicitly_wait(20)

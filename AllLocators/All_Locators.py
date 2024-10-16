@@ -152,3 +152,6 @@ class AllLocators:
     NEGATIVE_ENTER_GMAIL = (By.XPATH, "/html/body/div[3]/form/p[1]/input")
     NEGATIVE_ENTER_PASSWORD = (By.XPATH, "/html/body/div[3]/form/p[2]/input")
     NEGATIVE_CLICK_LOGIN = (By.ID, "submit")
+
+    #Error_message
+    ERROR_MESSAGE = (By.ID, "error")

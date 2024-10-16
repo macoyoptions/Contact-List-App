@@ -145,6 +145,6 @@ class Configaddnewcontact9:
 
 
 class ConfigNegativeLogin:
-    # BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
+    BASEURL1 = "https://thinking-tester-contact-list.herokuapp.com/"
     NEGATIVE_EMAIL = "adex@gmail"
     NEGATIVE_PASSWORD = "Adeola12"

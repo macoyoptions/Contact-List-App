@@ -33,6 +33,7 @@ class ActionPage:
         time.sleep(5)
 
         # Fill in all the information required for a 1st contact
+
     def addnewcontact(self):
         click_addnewcontact = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located(AllLocators.CLICK_ADD_NEW_CONTACT))
@@ -829,7 +830,16 @@ class ActionPage:
         click_logout.click()
         time.sleep(5)
 
-        # for negative login
+
+# for negative login
+class ActionPage1:
+    def __init__(self, driver):
+        self.driver = driver
+
+    def login_url(self, url):
+        self.driver.get(url)
+        time.sleep(5)
+
     def negativegmail(self, gmail):
         enter_gmail = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located(AllLocators.NEGATIVE_ENTER_GMAIL))
@@ -847,4 +857,11 @@ class ActionPage:
             EC.presence_of_element_located(AllLocators.NEGATIVE_CLICK_LOGIN))
         click_submit.click()
         time.sleep(5)
+
+    def get_error_message_element(self):
+        error_message_element = WebDriverWait(self.driver,10).until(
+            EC.presence_of_element_located(AllLocators.ERROR_MESSAGE))
+        return error_message_element
+
+
 

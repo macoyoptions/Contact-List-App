@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.edge.options import Options
 
-from ActionPage.ActionPage_test import ActionPage
+from ActionPage.ActionPage_test import ActionPage, ActionPage1
 from config.config import Config, Configaddnewcontact, Configaddnewcontact1, Configaddnewcontact2, Configaddnewcontact3, \
     Configaddnewcontact4, Configaddnewcontact5, Configaddnewcontact6, Configaddnewcontact7, Configaddnewcontact8, \
     Configaddnewcontact9, ConfigNegativeLogin
@@ -12,8 +12,8 @@ from config.config import Config, Configaddnewcontact, Configaddnewcontact1, Con
 def driver_setup():
     edge_options = Options()
     # Uncomment the line below to run in headless mode
-    # edge_options.add_argument("--headless")  # Run Chrome in headless mode
-    # edge_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
+    edge_options.add_argument("--headless")  # Run Chrome in headless mode
+    edge_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
     driver = webdriver.Edge(options=edge_options)
     driver.implicitly_wait(20)
     driver.maximize_window()
@@ -200,11 +200,13 @@ def test_logout(login):
     logoutpage = ActionPage(login.driver)
     logoutpage.logout()
 
-# negative login
+
+@pytest.fixture(scope="session")
+def driver_setup1():
     edge_options = Options()
     # Uncomment the line below to run in headless mode
-    # edge_options.add_argument("--headless")  # Run Chrome in headless mode
-    # edge_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
+    edge_options.add_argument("--headless")  # Run Chrome in headless mode
+    edge_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
     driver = webdriver.Edge(options=edge_options)
     driver.implicitly_wait(20)
     driver.maximize_window()
@@ -213,15 +215,23 @@ def test_logout(login):
 
 
 @pytest.fixture(scope="session")
-def negativelogin(driver_setup):
-    driver = driver_setup
-    login_page = ActionPage(driver)
-    login_page.login_url(Config.BASEURL)
+def negative_login(driver_setup1):
+    driver = driver_setup1
+    login_page = ActionPage1(driver)
+    login_page.login_url(ConfigNegativeLogin.BASEURL1)
     return login_page
 
 
-def test_negative_login_page_contact_list(login):
-    login.login()
-    login.email(ConfigNegativeLogin.NEGATIVE_EMAIL)
-    login.password(ConfigNegativeLogin.NEGATIVE_PASSWORD)
-    login.negativelogin()
+def test_negative_login_page_contact_list(negative_login):
+    negative_login.negativelogin()
+    negative_login.negativegmail(ConfigNegativeLogin.NEGATIVE_EMAIL)
+    negative_login.negativepassword(ConfigNegativeLogin.NEGATIVE_PASSWORD)
+    negative_login.negativelogin()
+
+    # Verify the error message
+    error_message_element = negative_login.get_error_message_element()
+    error_message = error_message_element.text
+    assert "Incorrect username or password" in error_message, \
+        "Error message does not match expected."
+
+    print("Negative test passed: Incorrect username or password")

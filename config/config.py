@@ -1,10 +1,11 @@
 class Config:
     BASEURL = "https://thinking-tester-contact-list.herokuapp.com/"
-    GMAIL = "olaide@gmail.com"
-    PASSWORD = "Adeola12"
+    GMAIL = "tinubu@gmail.com"
+    PASSWORD = "adeola$12"
+    NEGATIVE_EMAIL = "adex@gmail"
 
 
-class Configaddnewcontact:
+class ConfigAddNewContact:
     FIRSTNAME = "Chibuzor"
     LASTNAME = "simpson"
     DOB = "1995-02-04"
@@ -18,7 +19,7 @@ class Configaddnewcontact:
     COUNTRY = "Nigeria"
 
 
-class Configaddnewcontact1:
+class ConfigAddNewContact1:
     FIRSTNAME1 = "Chinaza"
     LASTNAME1 = "gloria"
     DOB1 = "1997-02-04"
@@ -32,7 +33,7 @@ class Configaddnewcontact1:
     COUNTRY1 = "Nigeria"
 
 
-class Configaddnewcontact2:
+class ConfigAddNewContact2:
     FIRSTNAME2 = "adiza"
     LASTNAME2 = "jamiu"
     DOB2 = "1997-02-04"
@@ -46,7 +47,7 @@ class Configaddnewcontact2:
     COUNTRY2 = "Nigeria"
 
 
-class Configaddnewcontact3:
+class ConfigAddNewContact3:
     FIRSTNAME3 = "adaize"
     LASTNAME3 = "shina"
     DOB3 = "1997-02-04"
@@ -60,7 +61,7 @@ class Configaddnewcontact3:
     COUNTRY3 = "Nigeria"
 
 
-class Configaddnewcontact4:
+class ConfigAddNewContact4:
     FIRSTNAME4 = "solomon"
     LASTNAME4 = "akin"
     DOB4 = "1997-02-04"
@@ -74,7 +75,7 @@ class Configaddnewcontact4:
     COUNTRY4 = "Nigeria"
 
 
-class Configaddnewcontact5:
+class ConfigAddNewContact5:
     FIRSTNAME5 = "ademide"
     LASTNAME5 = "jamiu"
     DOB5 = "1997-02-04"
@@ -88,7 +89,7 @@ class Configaddnewcontact5:
     COUNTRY5 = "Nigeria"
 
 
-class Configaddnewcontact6:
+class ConfigAddNewContact6:
     FIRSTNAME6 = "shade"
     LASTNAME6 = "pelumi"
     DOB6 = "1997-02-04"
@@ -102,7 +103,7 @@ class Configaddnewcontact6:
     COUNTRY6 = "Nigeria"
 
 
-class Configaddnewcontact7:
+class ConfigAddNewContact7:
     FIRSTNAME7 = "shayo"
     LASTNAME7 = "fisayo"
     DOB7 = "1997-02-04"
@@ -116,7 +117,7 @@ class Configaddnewcontact7:
     COUNTRY7 = "Nigeria"
 
 
-class Configaddnewcontact8:
+class ConfigAddNewContact8:
     FIRSTNAME8 = "Ria"
     LASTNAME8 = "oshodi"
     DOB8 = "1997-02-04"
@@ -130,21 +131,17 @@ class Configaddnewcontact8:
     COUNTRY8 = "Nigeria"
 
 
-class Configaddnewcontact9:
+class ConfigAddNewContact9:
     FIRSTNAME9 = "adiza"
     LASTNAME9 = "jamiu"
     DOB9 = "1997-02-04"
     EMAIL9 = "Adizaa@gmail.com"
     NUMBER9 = "09093494233"
-    STREET9 = "adiza bello street lagos state"
-    STRT9 = "adiza bello street lagos state"
+    STREET9 = "Adiza_Bello street lagos state"
+    STRT9 = "adiza_bello street lagos state"
     CITY9 = "lagos"
     STATE9 = "akure"
     POSTAL9 = "2311"
     COUNTRY9 = "Nigeria"
 
 
-class ConfigNegativeLogin:
-    BASEURL1 = "https://thinking-tester-contact-list.herokuapp.com/"
-    NEGATIVE_EMAIL = "adex@gmail"
-    NEGATIVE_PASSWORD = "Adeola12"

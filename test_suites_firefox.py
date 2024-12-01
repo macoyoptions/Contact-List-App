@@ -2,10 +2,12 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
-from ActionPage.ActionPage_test import ActionPage, ActionPage1
-from config.config import Config, Configaddnewcontact, Configaddnewcontact1, Configaddnewcontact2, Configaddnewcontact3, \
-    Configaddnewcontact4, Configaddnewcontact5, Configaddnewcontact6, Configaddnewcontact7, Configaddnewcontact8, \
-    Configaddnewcontact9, ConfigNegativeLogin
+from ActionPage.ActionPage_test import ActionPage, LogoutPage, AddNewContactPage9, AddNewContactPage8, \
+    AddNewContactPage7, AddNewContactPage6, AddNewContactPage5, AddNewContactPage4, AddNewContactPage3, \
+    AddNewContactPage2, AddNewContactPage1, AddNewContactPage
+from config.config import Config, ConfigAddNewContact9, ConfigAddNewContact8, ConfigAddNewContact7, \
+    ConfigAddNewContact6, ConfigAddNewContact5, ConfigAddNewContact4, ConfigAddNewContact3, ConfigAddNewContact2, \
+    ConfigAddNewContact1, ConfigAddNewContact
 
 
 @pytest.fixture(scope="session")
@@ -29,210 +31,189 @@ def login(driver_setup):
     return login_page
 
 
-def test_login_page_contact_list(login):
-    login.login()
-    login.email(Config.GMAIL)
-    login.password(Config.PASSWORD)
-    login.login()
-
-
-def test_addnewcontact_contact_list(login):
-    addnewcontact = ActionPage(login.driver)
-    addnewcontact.addnewcontact()
-    addnewcontact.firstname(Configaddnewcontact.FIRSTNAME)
-    addnewcontact.lastname(Configaddnewcontact.LASTNAME)
-    addnewcontact.dob(Configaddnewcontact.DOB)
-    addnewcontact.email(Configaddnewcontact.EMAIL)
-    addnewcontact.number(Configaddnewcontact.NUMBER)
-    addnewcontact.street(Configaddnewcontact.STREET)
-    addnewcontact.city(Configaddnewcontact.CITY)
-    addnewcontact.state(Configaddnewcontact.STATE)
-    addnewcontact.postal(Configaddnewcontact.POSTAL)
-    addnewcontact.country(Configaddnewcontact.COUNTRY)
-    addnewcontact.submit()
-
-
-def test_addnewcontact_contact_list1(login):
-    addnewcontact = ActionPage(login.driver)
-    addnewcontact.addnewcontact1()
-    addnewcontact.firstname1(Configaddnewcontact1.FIRSTNAME1)
-    addnewcontact.lastname1(Configaddnewcontact1.LASTNAME1)
-    addnewcontact.dob1(Configaddnewcontact1.DOB1)
-    addnewcontact.email1(Configaddnewcontact1.EMAIL1)
-    addnewcontact.number1(Configaddnewcontact1.NUMBER1)
-    addnewcontact.street1(Configaddnewcontact1.STREET1)
-    addnewcontact.city1(Configaddnewcontact1.CITY1)
-    addnewcontact.state1(Configaddnewcontact1.STATE1)
-    addnewcontact.postal1(Configaddnewcontact1.POSTAL1)
-    addnewcontact.country1(Configaddnewcontact1.COUNTRY1)
-    addnewcontact.submit1()
-
-
-def test_addnewcontact_contact_list2(login):
-    addnewcontact = ActionPage(login.driver)
-    addnewcontact.addnewcontact2()
-    addnewcontact.firstname2(Configaddnewcontact2.FIRSTNAME2)
-    addnewcontact.lastname2(Configaddnewcontact2.LASTNAME2)
-    addnewcontact.dob2(Configaddnewcontact2.DOB2)
-    addnewcontact.email2(Configaddnewcontact2.EMAIL2)
-    addnewcontact.number2(Configaddnewcontact2.NUMBER2)
-    addnewcontact.street2(Configaddnewcontact2.STREET2)
-    addnewcontact.city2(Configaddnewcontact2.CITY2)
-    addnewcontact.state2(Configaddnewcontact2.STATE2)
-    addnewcontact.postal2(Configaddnewcontact2.POSTAL2)
-    addnewcontact.country2(Configaddnewcontact2.COUNTRY2)
-    addnewcontact.submit2()
-
-
-def test_addnewcontact_contact_list3(login):
-    addnewcontact = ActionPage(login.driver)
-    addnewcontact.addnewcontact3()
-    addnewcontact.firstname3(Configaddnewcontact3.FIRSTNAME3)
-    addnewcontact.lastname3(Configaddnewcontact3.LASTNAME3)
-    addnewcontact.dob3(Configaddnewcontact3.DOB3)
-    addnewcontact.email3(Configaddnewcontact3.EMAIL3)
-    addnewcontact.number3(Configaddnewcontact3.NUMBER3)
-    addnewcontact.street3(Configaddnewcontact3.STREET3)
-    addnewcontact.city3(Configaddnewcontact3.CITY3)
-    addnewcontact.state3(Configaddnewcontact3.STATE3)
-    addnewcontact.postal3(Configaddnewcontact3.POSTAL3)
-    addnewcontact.country3(Configaddnewcontact3.COUNTRY3)
-    addnewcontact.submit3()
-
-
-def test_addnewcontact_contact_list4(login):
-    addnewcontact = ActionPage(login.driver)
-    addnewcontact.addnewcontact4()
-    addnewcontact.firstname4(Configaddnewcontact4.FIRSTNAME4)
-    addnewcontact.lastname4(Configaddnewcontact4.LASTNAME4)
-    addnewcontact.dob4(Configaddnewcontact4.DOB4)
-    addnewcontact.email4(Configaddnewcontact4.EMAIL4)
-    addnewcontact.number4(Configaddnewcontact4.NUMBER4)
-    addnewcontact.street4(Configaddnewcontact4.STREET4)
-    addnewcontact.city4(Configaddnewcontact4.CITY4)
-    addnewcontact.state4(Configaddnewcontact4.STATE4)
-    addnewcontact.postal4(Configaddnewcontact4.POSTAL4)
-    addnewcontact.country4(Configaddnewcontact4.COUNTRY4)
-    addnewcontact.submit4()
-
-
-def test_addnewcontact_contact_list5(login):
-    addnewcontact = ActionPage(login.driver)
-    addnewcontact.addnewcontact5()
-    addnewcontact.firstname5(Configaddnewcontact5.FIRSTNAME5)
-    addnewcontact.lastname5(Configaddnewcontact5.LASTNAME5)
-    addnewcontact.dob5(Configaddnewcontact5.DOB5)
-    addnewcontact.email5(Configaddnewcontact5.EMAIL5)
-    addnewcontact.number5(Configaddnewcontact5.NUMBER5)
-    addnewcontact.street5(Configaddnewcontact5.STREET5)
-    addnewcontact.city5(Configaddnewcontact5.CITY5)
-    addnewcontact.state5(Configaddnewcontact5.STATE5)
-    addnewcontact.postal5(Configaddnewcontact5.POSTAL5)
-    addnewcontact.country5(Configaddnewcontact5.COUNTRY5)
-    addnewcontact.submit5()
-
-
-def test_addnewcontact_contact_list6(login):
-    addnewcontact = ActionPage(login.driver)
-    addnewcontact.addnewcontact6()
-    addnewcontact.firstname6(Configaddnewcontact6.FIRSTNAME6)
-    addnewcontact.lastname6(Configaddnewcontact6.LASTNAME6)
-    addnewcontact.dob6(Configaddnewcontact6.DOB6)
-    addnewcontact.email6(Configaddnewcontact6.EMAIL6)
-    addnewcontact.number6(Configaddnewcontact6.NUMBER6)
-    addnewcontact.street6(Configaddnewcontact6.STREET6)
-    addnewcontact.city6(Configaddnewcontact6.CITY6)
-    addnewcontact.state6(Configaddnewcontact6.STATE6)
-    addnewcontact.postal6(Configaddnewcontact6.POSTAL6)
-    addnewcontact.country6(Configaddnewcontact6.COUNTRY6)
-    addnewcontact.submit6()
-
-
-def test_addnewcontact_contact_list7(login):
-    addnewcontact = ActionPage(login.driver)
-    addnewcontact.addnewcontact7()
-    addnewcontact.firstname7(Configaddnewcontact7.FIRSTNAME7)
-    addnewcontact.lastname7(Configaddnewcontact7.LASTNAME7)
-    addnewcontact.dob7(Configaddnewcontact7.DOB7)
-    addnewcontact.email7(Configaddnewcontact7.EMAIL7)
-    addnewcontact.number7(Configaddnewcontact7.NUMBER7)
-    addnewcontact.street7(Configaddnewcontact7.STREET7)
-    addnewcontact.city7(Configaddnewcontact7.CITY7)
-    addnewcontact.state7(Configaddnewcontact7.STATE7)
-    addnewcontact.postal7(Configaddnewcontact7.POSTAL7)
-    addnewcontact.country7(Configaddnewcontact7.COUNTRY7)
-    addnewcontact.submit7()
-
-
-def test_addnewcontact_contact_list8(login):
-    addnewcontact = ActionPage(login.driver)
-    addnewcontact.addnewcontact8()
-    addnewcontact.firstname8(Configaddnewcontact8.FIRSTNAME8)
-    addnewcontact.lastname8(Configaddnewcontact8.LASTNAME8)
-    addnewcontact.dob8(Configaddnewcontact8.DOB8)
-    addnewcontact.email8(Configaddnewcontact8.EMAIL8)
-    addnewcontact.number8(Configaddnewcontact8.NUMBER8)
-    addnewcontact.street8(Configaddnewcontact8.STREET8)
-    addnewcontact.city8(Configaddnewcontact8.CITY8)
-    addnewcontact.state8(Configaddnewcontact8.STATE8)
-    addnewcontact.postal8(Configaddnewcontact8.POSTAL8)
-    addnewcontact.country8(Configaddnewcontact8.COUNTRY8)
-    addnewcontact.submit8()
-
-
-def test_addnewcontact_contact_list9(login):
-    addnewcontact = ActionPage(login.driver)
-    addnewcontact.addnewcontact9()
-    addnewcontact.firstname9(Configaddnewcontact9.FIRSTNAME9)
-    addnewcontact.lastname9(Configaddnewcontact9.LASTNAME9)
-    addnewcontact.dob9(Configaddnewcontact9.DOB9)
-    addnewcontact.email9(Configaddnewcontact9.EMAIL9)
-    addnewcontact.number9(Configaddnewcontact9.NUMBER9)
-    addnewcontact.street9(Configaddnewcontact9.STREET9)
-    addnewcontact.city9(Configaddnewcontact9.CITY9)
-    addnewcontact.state9(Configaddnewcontact9.STATE9)
-    addnewcontact.postal9(Configaddnewcontact9.POSTAL9)
-    addnewcontact.country9(Configaddnewcontact9.COUNTRY9)
-    addnewcontact.submit9()
-
-
-def test_logout(login):
-    logoutpage = ActionPage(login.driver)
-    logoutpage.logout()
-
-
-# negative login
-@pytest.fixture(scope="session")
-def driver_setup1():
-    firefox_options = Options()
-    # Uncomment the line below to run in headless mode
-    firefox_options.add_argument("--headless")  # Run Firefox in headless mode
-    firefox_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
-    driver = webdriver.Firefox(options=firefox_options)
-    driver.implicitly_wait(20)
-    driver.maximize_window()
-    yield driver
-    driver.quit()
-
-
-@pytest.fixture(scope="session")
-def negative_login(driver_setup1):
-    driver = driver_setup1
-    login_page = ActionPage1(driver)
-    login_page.login_url(ConfigNegativeLogin.BASEURL1)
-    return login_page
-
-
-def test_negative_login_page_contact_list(negative_login):
-    negative_login.negativelogin()
-    negative_login.negativegmail(ConfigNegativeLogin.NEGATIVE_EMAIL)
-    negative_login.negativepassword(ConfigNegativeLogin.NEGATIVE_PASSWORD)
-    negative_login.negativelogin()
+def test_negative_login_page_contact_list(login):
+    login.enter_gmail(Config.NEGATIVE_EMAIL)
+    login.enter_password(Config.PASSWORD)
+    login.click_login()
+    login.clear_gmail()
+    login.clear_password()
 
     # Verify the error message
-    error_message_element = negative_login.get_error_message_element()
+    error_message_element = login.get_error_message_element()
     error_message = error_message_element.text
     assert "Incorrect username or password" in error_message, \
         "Error message does not match expected."
 
     print("Negative test passed: Incorrect username or password")
+
+
+# positive login
+def test_positive_login_page_contact_list(login):
+    login.enter_gmail(Config.GMAIL)
+    login.enter_password(Config.PASSWORD)
+    login.click_login()
+
+
+def test_add_new_contact_contact_list(login):
+    add_new_contact = AddNewContactPage(login.driver)
+    add_new_contact.add_new_contact()
+    add_new_contact.firstname(ConfigAddNewContact.FIRSTNAME)
+    add_new_contact.lastname(ConfigAddNewContact.LASTNAME)
+    add_new_contact.dob(ConfigAddNewContact.DOB)
+    add_new_contact.email(ConfigAddNewContact.EMAIL)
+    add_new_contact.number(ConfigAddNewContact.NUMBER)
+    add_new_contact.street(ConfigAddNewContact.STREET)
+    add_new_contact.city(ConfigAddNewContact.CITY)
+    add_new_contact.state(ConfigAddNewContact.STATE)
+    add_new_contact.postal(ConfigAddNewContact.POSTAL)
+    add_new_contact.country(ConfigAddNewContact.COUNTRY)
+    add_new_contact.submit()
+
+
+def test_add_new_contact_contact_list1(login):
+    add_new_contact = AddNewContactPage1(login.driver)
+    add_new_contact.add_new_contact()
+    add_new_contact.firstname(ConfigAddNewContact1.FIRSTNAME1)
+    add_new_contact.lastname(ConfigAddNewContact1.LASTNAME1)
+    add_new_contact.dob(ConfigAddNewContact1.DOB1)
+    add_new_contact.email(ConfigAddNewContact1.EMAIL1)
+    add_new_contact.number(ConfigAddNewContact1.NUMBER1)
+    add_new_contact.street(ConfigAddNewContact1.STREET1)
+    add_new_contact.city(ConfigAddNewContact1.CITY1)
+    add_new_contact.state(ConfigAddNewContact1.STATE1)
+    add_new_contact.postal(ConfigAddNewContact1.POSTAL1)
+    add_new_contact.country(ConfigAddNewContact1.COUNTRY1)
+    add_new_contact.submit()
+
+
+def test_add_new_contact_contact_list2(login):
+    add_new_contact = AddNewContactPage2(login.driver)
+    add_new_contact.add_new_contact()
+    add_new_contact.firstname(ConfigAddNewContact2.FIRSTNAME2)
+    add_new_contact.lastname(ConfigAddNewContact2.LASTNAME2)
+    add_new_contact.dob(ConfigAddNewContact2.DOB2)
+    add_new_contact.email(ConfigAddNewContact2.EMAIL2)
+    add_new_contact.number(ConfigAddNewContact2.NUMBER2)
+    add_new_contact.street(ConfigAddNewContact2.STREET2)
+    add_new_contact.city(ConfigAddNewContact2.CITY2)
+    add_new_contact.state(ConfigAddNewContact2.STATE2)
+    add_new_contact.postal(ConfigAddNewContact2.POSTAL2)
+    add_new_contact.country(ConfigAddNewContact2.COUNTRY2)
+    add_new_contact.submit()
+
+
+def test_add_new_contact_contact_list3(login):
+    add_new_contact = AddNewContactPage3(login.driver)
+    add_new_contact.add_new_contact()
+    add_new_contact.firstname(ConfigAddNewContact3.FIRSTNAME3)
+    add_new_contact.lastname(ConfigAddNewContact3.LASTNAME3)
+    add_new_contact.dob(ConfigAddNewContact3.DOB3)
+    add_new_contact.email(ConfigAddNewContact3.EMAIL3)
+    add_new_contact.number(ConfigAddNewContact3.NUMBER3)
+    add_new_contact.street(ConfigAddNewContact3.STREET3)
+    add_new_contact.city(ConfigAddNewContact3.CITY3)
+    add_new_contact.state(ConfigAddNewContact3.STATE3)
+    add_new_contact.postal(ConfigAddNewContact3.POSTAL3)
+    add_new_contact.country(ConfigAddNewContact3.COUNTRY3)
+    add_new_contact.submit()
+
+
+def test_add_new_contact_contact_list4(login):
+    add_new_contact = AddNewContactPage4(login.driver)
+    add_new_contact.add_new_contact()
+    add_new_contact.firstname(ConfigAddNewContact4.FIRSTNAME4)
+    add_new_contact.lastname(ConfigAddNewContact4.LASTNAME4)
+    add_new_contact.dob(ConfigAddNewContact4.DOB4)
+    add_new_contact.email(ConfigAddNewContact4.EMAIL4)
+    add_new_contact.number(ConfigAddNewContact4.NUMBER4)
+    add_new_contact.street(ConfigAddNewContact4.STREET4)
+    add_new_contact.city(ConfigAddNewContact4.CITY4)
+    add_new_contact.state(ConfigAddNewContact4.STATE4)
+    add_new_contact.postal(ConfigAddNewContact4.POSTAL4)
+    add_new_contact.country(ConfigAddNewContact4.COUNTRY4)
+    add_new_contact.submit()
+
+
+def test_add_new_contact_contact_list5(login):
+    add_new_contact = AddNewContactPage5(login.driver)
+    add_new_contact.add_new_contact()
+    add_new_contact.firstname(ConfigAddNewContact5.FIRSTNAME5)
+    add_new_contact.lastname(ConfigAddNewContact5.LASTNAME5)
+    add_new_contact.dob(ConfigAddNewContact5.DOB5)
+    add_new_contact.email(ConfigAddNewContact5.EMAIL5)
+    add_new_contact.number(ConfigAddNewContact5.NUMBER5)
+    add_new_contact.street(ConfigAddNewContact5.STREET5)
+    add_new_contact.city(ConfigAddNewContact5.CITY5)
+    add_new_contact.state(ConfigAddNewContact5.STATE5)
+    add_new_contact.postal(ConfigAddNewContact5.POSTAL5)
+    add_new_contact.country(ConfigAddNewContact5.COUNTRY5)
+    add_new_contact.submit()
+
+
+def test_add_new_contact_contact_list6(login):
+    add_new_contact = AddNewContactPage6(login.driver)
+    add_new_contact.add_new_contact()
+    add_new_contact.firstname(ConfigAddNewContact6.FIRSTNAME6)
+    add_new_contact.lastname(ConfigAddNewContact6.LASTNAME6)
+    add_new_contact.dob(ConfigAddNewContact6.DOB6)
+    add_new_contact.email(ConfigAddNewContact6.EMAIL6)
+    add_new_contact.number(ConfigAddNewContact6.NUMBER6)
+    add_new_contact.street(ConfigAddNewContact6.STREET6)
+    add_new_contact.city(ConfigAddNewContact6.CITY6)
+    add_new_contact.state(ConfigAddNewContact6.STATE6)
+    add_new_contact.postal(ConfigAddNewContact6.POSTAL6)
+    add_new_contact.country(ConfigAddNewContact6.COUNTRY6)
+    add_new_contact.submit()
+
+
+def test_add_new_contact_contact_list7(login):
+    add_new_contact = AddNewContactPage7(login.driver)
+    add_new_contact.add_new_contact()
+    add_new_contact.firstname(ConfigAddNewContact7.FIRSTNAME7)
+    add_new_contact.lastname(ConfigAddNewContact7.LASTNAME7)
+    add_new_contact.dob(ConfigAddNewContact7.DOB7)
+    add_new_contact.email(ConfigAddNewContact7.EMAIL7)
+    add_new_contact.number(ConfigAddNewContact7.NUMBER7)
+    add_new_contact.street(ConfigAddNewContact7.STREET7)
+    add_new_contact.city(ConfigAddNewContact7.CITY7)
+    add_new_contact.state(ConfigAddNewContact7.STATE7)
+    add_new_contact.postal(ConfigAddNewContact7.POSTAL7)
+    add_new_contact.country(ConfigAddNewContact7.COUNTRY7)
+    add_new_contact.submit()
+
+
+def test_add_new_contact_contact_list8(login):
+    add_new_contact = AddNewContactPage8(login.driver)
+    add_new_contact.add_new_contact()
+    add_new_contact.firstname(ConfigAddNewContact8.FIRSTNAME8)
+    add_new_contact.lastname(ConfigAddNewContact8.LASTNAME8)
+    add_new_contact.dob(ConfigAddNewContact8.DOB8)
+    add_new_contact.email(ConfigAddNewContact8.EMAIL8)
+    add_new_contact.number(ConfigAddNewContact8.NUMBER8)
+    add_new_contact.street(ConfigAddNewContact8.STREET8)
+    add_new_contact.city(ConfigAddNewContact8.CITY8)
+    add_new_contact.state(ConfigAddNewContact8.STATE8)
+    add_new_contact.postal(ConfigAddNewContact8.POSTAL8)
+    add_new_contact.country(ConfigAddNewContact8.COUNTRY8)
+    add_new_contact.submit()
+
+
+def test_add_new_contact_contact_list9(login):
+    add_new_contact = AddNewContactPage9(login.driver)
+    add_new_contact.add_new_contact()
+    add_new_contact.firstname(ConfigAddNewContact9.FIRSTNAME9)
+    add_new_contact.lastname(ConfigAddNewContact9.LASTNAME9)
+    add_new_contact.dob(ConfigAddNewContact9.DOB9)
+    add_new_contact.email(ConfigAddNewContact9.EMAIL9)
+    add_new_contact.number(ConfigAddNewContact9.NUMBER9)
+    add_new_contact.street(ConfigAddNewContact9.STREET9)
+    add_new_contact.city(ConfigAddNewContact9.CITY9)
+    add_new_contact.state(ConfigAddNewContact9.STATE9)
+    add_new_contact.postal(ConfigAddNewContact9.POSTAL9)
+    add_new_contact.country(ConfigAddNewContact9.COUNTRY9)
+    add_new_contact.submit()
+
+
+def test_logout(login):
+    logout_page = LogoutPage(login.driver)
+    logout_page.logout()
